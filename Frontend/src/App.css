@@ -1,0 +1,440 @@
+.validationErr {
+  color: red;
+}
+
+.approved_cls {
+  color: green;
+}
+
+.rejected_cls {
+  color: red;
+}
+
+.swal2-title {
+  color: #10161c !important;
+}
+
+.loginLogo {
+  /* background: #11161e; */
+  padding: 10px;
+  border-radius: 13px;
+}
+
+.bankLogo{
+  height: 100px;
+  width: 200px;
+  object-fit: cover;
+}
+
+/* .admin-login {
+  border: 1px solid #1d1d1d;
+  background: #1d1d1d;
+} */
+
+.admin-login .form-control:hover,
+.admin-login .form-control:focus {
+  background: #0c0c0c;
+}
+
+/* .loginLogo img{
+  width: 40%;
+} */
+.table_filter {
+  float: right;
+}
+
+.table thead {
+  background: #1f1f1f;
+}
+
+.as-react-table table thead {
+  background: #1f1f1f;
+}
+
+.pagination li.page-item {
+  line-height: 5px;
+}
+
+/* .as-react-table {
+  overflow-x: auto;
+} */
+
+/* width */
+.as-react-table::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+/* Track */
+
+.as-react-table::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #010000;
+  border-radius: 10px;
+}
+
+/* Handle */
+.as-react-table::-webkit-scrollbar-thumb {
+  background: #3a3a3a;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.as-react-table::-webkit-scrollbar-thumb:hover {
+  background: #3a3a3a;
+}
+
+.table-foot {
+  margin-bottom: 11px;
+}
+
+.passfield {
+  background: #0c0c0c;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #39393a;
+}
+
+span.eyeicon {
+  color: #fff;
+}
+
+button.swal2-confirm.swal2-styled.swal2-default-outline {
+  background: black !important;
+}
+
+button.swal2-confirm.swal2-styled.swal2-default-outline:focus {
+  box-shadow: none;
+}
+
+.modal-header h5 {
+  color: #000;
+}
+
+
+.modal-header .btn-close:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.theme-primary.dark-skin .sidebar-menu>li.active.treeview .treeview-menu li a:hover {
+  color: #000 !important;
+}
+
+.modal.show .modal-dialog {
+  transform: none;
+  z-index: 1041;
+}
+
+body.dark-skin.sidebar-mini.theme-primary.fixed:nth-child(3) {
+  display: flex !important;
+}
+
+#editbtnid:hover {
+  background: #000 !important;
+}
+
+.view_order table thead th {
+  color: black !important;
+}
+
+#as-react-datatable-table-foot {
+  color: #fff;
+}
+
+.profileTable {
+  color: #fff !important;
+}
+
+.modal-content {
+  background: #010000 !important;
+  columns: #fff !important;
+  border: 1px solid rgb(158 158 158 / 29%);
+}
+
+.modal-title {
+  color: #fff;
+}
+
+.dropdown-toggle::after {
+  float: right;
+  margin-top: 11px;
+}
+
+.activeData {
+  margin-left: 16px;
+}
+
+.activeRoute {
+  background-color: rgba(93, 105, 233, 0);
+  color: white;
+  border-left: 0px solid rgb(225 176 40);
+}
+
+td>b {
+  color: gray;
+  font-weight: 500;
+}
+
+.modal-footer button {
+  float: right;
+}
+
+.badge {
+  cursor: not-allowed !important;
+}
+
+.filterTabs {
+  margin-bottom: 20px;
+}
+
+/* .filterTabs a{
+  color: #fff!important;
+} */
+.filterTabs li>a {
+  color: #fff;
+}
+
+.filterTabs li>a:hover,
+.filterTabs li>a:active,
+.filterTabs li>a:focus {
+  color: #E1B028 !important;
+}
+
+.filterTabs .active a {
+  color: #E1B028 !important;
+  border-bottom: 1px solid #E1B028;
+  border-radius: 0px;
+}
+
+.dailyInsight {
+  padding: 10px;
+  background: rgb(12 12 12);
+  border-radius: 8px;
+}
+
+.alertNoti {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  color: #fff;
+  background: #0c0c0c;
+  border: 1px solid #E1B02842;
+  border-radius: 4px;
+  padding: .75rem 1.125rem;
+}
+
+/* .filterTabs li:hover, .filterTabs li:active, .filterTabs li:focus {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-left: 1px solid rgba(255, 255, 255, 0.12);
+  border-right: 1px solid rgba(255, 255, 255, 0.12);
+} */
+
+/* .filterTabs .active{
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-left: 1px solid rgba(255, 255, 255, 0.12);
+  border-right: 1px solid rgba(255, 255, 255, 0.12);
+} */
+
+.profile-tables-container {
+  display: flex;
+  /* Arrange tables side by side */
+  gap: 20px;
+  /* Space between tables */
+}
+
+.profileTable {
+  width: 100%;
+  /* Set a fixed width for all tables */
+  height: auto;
+  /* Ensure height adjusts dynamically */
+  background-color: #141313;
+  /* Optional background color for uniformity */
+  border: 1px solid #0f0f0f;
+  /* Consistent border style */
+  border-radius: 5px;
+  /* Rounded corners for aesthetics */
+}
+
+.profileTable th,
+.profileTable td {
+  padding: 10px;
+  /* Add padding to table cells */
+  text-align: left;
+  /* Align text to the left */
+  vertical-align: middle;
+  /* Align content vertically in the center */
+}
+
+.profileTable th {
+  width: 40%;
+  /* Set a relative width for headers */
+}
+
+.profileTable td {
+  width: 60%;
+  /* Set a relative width for content */
+}
+
+/* ---------Custom Scroll-------------- */
+
+.ps--scrolling-y::-webkit-scrollbar {
+  width: 3px;
+}
+
+/* Track */
+.ps--scrolling-y::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #0d0d0d;
+  border-radius: 10px;
+}
+
+/* Handle */
+.ps--scrolling-y::-webkit-scrollbar-thumb {
+  background: #6d6f72;
+  border-radius: 6px;
+  transition: background-color .2s linear, width .2s ease-in-out;
+  -webkit-transition: background-color .2s linear, width .2s ease-in-out;
+
+}
+
+/* Handle on hover */
+.ps--scrolling-y::-webkit-scrollbar-thumb:hover {
+  background: #6d6f72;
+}
+
+
+@media (min-width: 768px) {
+
+  .push-btn {
+    display: none !important;
+  }
+}
+
+.jodit-react-container {
+  color: #000 !important;
+}
+
+.editor {
+  height: 400px;
+}
+
+/* Dark background for toolbar and dropdowns */
+.jodit-toolbar__box,
+.jodit-ui-dropdown__content,
+.jodit-ui-list__item,
+.jodit-toolbar-button {
+  background-color: #1e1e1e !important;
+  border: 1px solid #444 !important;
+}
+
+/* Text inside dropdowns and buttons should be white */
+.jodit-ui-dropdown__content span,
+.jodit-ui-dropdown__content a,
+.jodit-toolbar-button__text,
+.jodit-ui-list__item {
+  color: #fff !important;
+}
+
+/* White icons */
+.jodit-toolbar-button svg,
+.jodit-ui-list__item svg {
+  fill: #fff !important;
+  color: #fff !important;
+}
+
+/* On hover: slightly lighter background for better UX */
+.jodit-ui-list__item:hover {
+  background-color: #2a2a2a !important;
+}
+
+/* Also apply dark theme to editor area */
+.jodit-wysiwyg {
+  background-color: #1e1e1e !important;
+  color: #fff !important;
+}
+
+/* Ensure bullets and numbers are visible */
+.jodit-wysiwyg ul,
+.jodit-wysiwyg ol {
+  list-style: initial !important;
+  margin-left: 1.5rem !important;
+  padding-left: 1.5rem !important;
+}
+
+/* Optional: Improve appearance of list items */
+.jodit-wysiwyg li {
+  margin-bottom: 0.5rem;
+}
+
+.back_btn a {
+  cursor: pointer;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+
+/* ============ tabs css start ============ */
+
+.btn-check:checked+.btn-primary:focus,
+.btn-check:active+.btn-primary:focus,
+.btn-primary:active:focus,
+.btn-primary.active:focus,
+.show>.btn-primary.dropdown-toggle:focus {
+  box-shadow: none;
+}
+
+/* ============ tabs css end ============ */
+
+
+/* ============== check box css start ============ */
+.child_check {
+  padding: 10px 30px;
+}
+
+/* ============== check box css end ============ */
+
+.swiper {
+  position: initial !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  top: auto !important;
+  bottom: -8% !important;
+  background: rgb(22, 22, 22);
+  box-shadow: 0px 0px 4px 0px #919191;
+  border-radius: 50%;
+  --swiper-navigation-size: 38px;
+  --swiper-navigation-size: 38px;
+}
+
+.swiper-button-prev svg,
+.swiper-button-next svg {
+  width: 39% !important;
+  height: 39% !important;
+  color: white;
+}
+
+.swiper-button-prev {
+  left: 46% !important;
+}
+
+.swiper-button-next {
+  right: 46% !important;
+}
+
+.hxYBga {
+  background-color: transparent !important;
+  color: white !important;
+}
+
+@media screen and (min-device-width: 200px) and (max-device-width: 1024px) {
+  .swiper-button-prev {
+    left: 42% !important;
+  }
+
+  .swiper-button-next {
+    right: 42% !important;
+  }
+}

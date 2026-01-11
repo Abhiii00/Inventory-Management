@@ -1,0 +1,47 @@
+.dark-logo img {
+  width: 180px;
+}
+
+
+@font-face {
+  font-family: Saira;
+  font-style: normal;
+  font-weight: 400;
+  src: url(../public/assets/fonts/Saira-Regular.ttf);
+}
+
+@font-face {
+  font-family: Saira;
+  font-style: normal;
+  font-weight: 500;
+  src: url(../public/assets/fonts/Saira-Medium.ttf);
+
+}
+
+@font-face {
+  font-family: Saira;
+  font-style: normal;
+  font-weight: bold;
+  src: url(../public/assets/fonts/Saira-Bold.ttf);
+
+}
+
+@font-face {
+  font-family: Saira;
+  font-style: normal;
+  font-weight: 700;
+  src: url(../public/assets/fonts/Saira-ExtraBold.ttf);
+
+}
+
+/* ---------------- */
+.as-react-table {
+  overflow-x: auto;
+}
+
+.greenText{
+  color: green;
+}
+.redText{
+  color: red;
+}
