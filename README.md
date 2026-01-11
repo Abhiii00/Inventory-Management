@@ -42,12 +42,12 @@ JWT_SECRET
 ## Test Credentials
 
 Tenant 1:
-OWNER - admin1@gmail.com / 123456 
-MANAGER - abhay@gmail.com / 123456
-STAFF - ajay@gmail.com / 123456
+- OWNER - admin1@gmail.com / 123456 
+- MANAGER - abhay@gmail.com / 123456
+- STAFF - ajay@gmail.com / 123456
 
 Tenant 2:
-OWNER - admin2@gmail.com / 123456  
+- OWNER - admin2@gmail.com / 123456  
 
 ## Features
 - Multi-tenant architecture
