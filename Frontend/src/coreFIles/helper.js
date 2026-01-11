@@ -41,7 +41,7 @@ export const request = async (path, data, method) => {
             }
 
             try {
-                const refreshRes = await axios.post(`${serverPath}/auth/refresh-token`, { refreshToken });
+                const refreshRes = await axios.post(`${serverPath}/auth/refreshToken`, { refreshToken });
                 if (refreshRes.data.success) {
                     const newLoginData = {
                         ...loginData,
