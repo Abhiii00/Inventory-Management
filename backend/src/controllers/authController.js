@@ -13,7 +13,7 @@ exports.login = async (req, res) => {
     const match = await bcrypt.compare(password, user.password);
     if (!match) return res.status(400).send({ success: false, message: AUTH.INVALID_PASSWORD });
 
-    const token = jwt.sign({ id: user._id, tenantId: user.tenantId, role: user.role }, process.env.JWT_SECRET, { expiresIn: "15m" });
+    const token = jwt.sign({ id: user._id, tenantId: user.tenantId, role: user.role }, process.env.JWT_SECRET, { expiresIn: "24h" });
     const refreshToken = jwt.sign({ id: user._id }, process.env.JWT_REFRESH_SECRET, { expiresIn: "7d" });
 
     await User.findByIdAndUpdate(user._id, { refreshToken });
@@ -37,7 +37,7 @@ exports.refreshToken = async (req, res) => {
     jwt.verify(refreshToken, process.env.JWT_REFRESH_SECRET, (err) => {
       if (err) return res.status(403).send({ success: false, message: AUTH.INVALID_TOKEN });
 
-      const token = jwt.sign({ id: user._id, tenantId: user.tenantId, role: user.role }, process.env.JWT_SECRET, { expiresIn: "15m" });
+      const token = jwt.sign({ id: user._id, tenantId: user.tenantId, role: user.role }, process.env.JWT_SECRET, { expiresIn: "24h" });
       return res.status(200).send({ success: true, message: AUTH.TOKEN_REFRESHED, data: { token } });
     });
   } catch (err) {
