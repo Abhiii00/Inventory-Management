@@ -73,8 +73,8 @@ The system uses role-based permissions to control access.
 
 Owner:
 
-Full platform access
-Can view, add, edit, and delete all data
+- Full platform access
+- Can view, add, and delete all data
 
 Access to:
 - Dashboard & analytics
@@ -88,9 +88,9 @@ Can manage users and assign roles
 
 Manager:
 
-Access to all modules
-Can view and add data
-Cannot delete any data
+- Access to all modules
+- Can view and add data
+- Cannot delete any data
 
 Access includes:
 - Dashboard
@@ -103,9 +103,9 @@ Access includes:
 
 Staff:
 
-Limited, read-only access
-Can only view data
-Cannot add, edit, or delete
+- Limited, read-only access
+- Can only view data
+- Cannot add, or delete
 
 Access includes:
 
