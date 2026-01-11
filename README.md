@@ -21,18 +21,18 @@ Frontend:
 ## Seed Tenant Data
 
 Run the seed file to insert default tenants, users:
-npm install 
-npm node seed.js 
+- npm install 
+- npm node seed.js 
 
 ## Setup
 
 Backend:
-npm install  
-npm node server.js 
+- npm install  
+- npm node server.js 
 
 Frontend:
-npm install  
-npm start  
+- npm install  
+- npm start  
 
 ## Environment Variables
 PORT  
