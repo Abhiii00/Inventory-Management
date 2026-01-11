@@ -66,5 +66,51 @@ Tenant 2:
 - One role per user
 - Soft delete is used instead of permanent delete
 
-# Inventory-Management
-# Inventory-Management
+
+## Role-Based Access Control (RBAC)
+
+The system uses role-based permissions to control access.
+
+Owner:
+
+Full platform access
+Can view, add, edit, and delete all data
+
+Access to:
+- Dashboard & analytics
+- User management
+- Suppliers
+- Products
+- Purchase Orders
+- Stock Updates
+
+Can manage users and assign roles
+
+Manager:
+
+Access to all modules
+Can view and add data
+Cannot delete any data
+
+Access includes:
+- Dashboard
+- View user list (no create/delete)
+- Suppliers
+- Products
+- Purchase Orders
+- Stock Updates
+
+
+Staff:
+
+Limited, read-only access
+Can only view data
+Cannot add, edit, or delete
+
+Access includes:
+
+- Dashboard
+- View-only lists (Products, Suppliers, Stock Updates)
+
+
+If you face any issues during installation or need further explanation, feel free to connect with me.
