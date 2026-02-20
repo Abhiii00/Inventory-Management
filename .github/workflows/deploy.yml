@@ -13,25 +13,20 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Build React frontend
-        working-directory: Frontend
-        run: |
-          npm install
-          CI=false npm run build
-
       - name: Deploy to EC2
         uses: appleboy/ssh-action@v1.0.0
         with:
           host: ${{ secrets.EC2_HOST }}
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_SSH_KEY }}
+          port: 22
           script: |
             cd /var/www/inventory-management
             git pull origin main
 
             cd backend
             npm install
-            pm2 restart backend
+            pm2 restart backend || pm2 start src/server.js --name backend
 
             cd ../Frontend
             npm install
