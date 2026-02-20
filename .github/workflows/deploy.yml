@@ -17,7 +17,7 @@ jobs:
         working-directory: Frontend
         run: |
           npm install
-          npm run build
+          CI=false npm run build
 
       - name: Deploy to EC2
         uses: appleboy/ssh-action@v1.0.0
@@ -35,7 +35,7 @@ jobs:
 
             cd ../Frontend
             npm install
-            CI=false npm run build
+            npm run build
 
             sudo rm -rf /var/www/html/*
             sudo cp -r build/* /var/www/html/
