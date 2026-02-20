@@ -43,7 +43,7 @@ const Sidebar = () => {
               <li className={pageUrl.includes("/dashboard") ? "active" : ""}>
                 <Link to={`${config.baseUrl}dashboard`}>
                   <i className="fa fa-dashboard" />
-                  <span>DASHBOARD 123</span>
+                  <span>DASHBOARD</span>
                 </Link>
               </li>
 
