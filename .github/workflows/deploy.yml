@@ -21,23 +21,23 @@ jobs:
 
       - name: Deploy to EC2
         uses: appleboy/ssh-action@v1.0.0
-        with:
-          host: ${{ secrets.EC2_HOST }}
-          username: ${{ secrets.EC2_USER }}
-          key: ${{ secrets.EC2_KEY }}
-          script: |
-            cd /var/www/inventory-management
-            git pull origin main
+   with:
+  host: ${{ secrets.EC2_HOST }}
+  username: ${{ secrets.EC2_USER }}
+  key: ${{ secrets.EC2_SSH_KEY }}
+  script: |
+    cd /var/www/inventory-management
+    git pull origin main
 
-            cd backend
-            npm install
-            pm2 restart backend
+    cd backend
+    npm install
+    pm2 restart backend
 
-            cd ../Frontend
-            npm install
-            CI=false npm run build
+    cd ../Frontend
+    npm install
+    CI=false npm run build
 
-            sudo rm -rf /var/www/html/*
-            sudo cp -r build/* /var/www/html/
+    sudo rm -rf /var/www/html/*
+    sudo cp -r build/* /var/www/html/
 
-            pm2 save
+    pm2 save
