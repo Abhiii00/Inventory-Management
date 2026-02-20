@@ -35,7 +35,7 @@ jobs:
 
             cd ../Frontend
             npm install
-            npm run build
+            CI=false npm run build
 
             sudo rm -rf /var/www/html/*
             sudo cp -r build/* /var/www/html/
