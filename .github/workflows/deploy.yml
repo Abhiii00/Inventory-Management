@@ -1,36 +1,58 @@
-script: |
-  set -e
+name: CI/CD Inventory Management
 
-  echo "📦 Going to project directory"
-  cd /home/ubuntu/Inventory-Management
+on:
+  push:
+    branches:
+      - main
 
-  echo "⬇️ Pulling latest code"
-  git pull origin main
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
 
-  echo "🔧 Backend setup"
-  cd backend
-  npm install
-  pm2 restart backend || pm2 start src/server.js --name backend
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-  echo "🎨 Frontend build"
-  cd ../Frontend
-  npm install
-  CI=false npm run build
+      - name: Deploy to EC2
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USER }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          port: 22
+          script: |
+            set -e
 
-  if [ ! -d "build" ]; then
-    echo "❌ Build folder not found"
-    exit 1
-  fi
+            echo "📦 Going to project directory"
+            cd /home/ubuntu/Inventory-Management
 
-  echo "🚀 Deploying frontend"
-  sudo rm -rf /var/www/html/*
-  sudo cp -r /home/ubuntu/Inventory-Management/Frontend/build/* /var/www/html/
+            echo "⬇️ Pulling latest code"
+            git pull origin main
 
-  echo "🔐 Fixing permissions"
-  sudo chown -R www-data:www-data /var/www/html
-  sudo chmod -R 755 /var/www/html
+            echo "🔧 Backend setup"
+            cd backend
+            npm install
+            pm2 restart backend || pm2 start src/server.js --name backend
 
-  echo "💾 Saving PM2 state"
-  pm2 save
+            echo "🎨 Frontend build"
+            cd ../Frontend
+            npm install
+            CI=false npm run build
 
-  echo "✅ Deployment successful"
+            if [ ! -d "build" ]; then
+              echo "❌ Build folder not found"
+              exit 1
+            fi
+
+            echo "🚀 Deploying frontend"
+            sudo rm -rf /var/www/html/*
+            sudo cp -r /home/ubuntu/Inventory-Management/Frontend/build/* /var/www/html/
+
+            echo "🔐 Fixing permissions"
+            sudo chown -R www-data:www-data /var/www/html
+            sudo chmod -R 755 /var/www/html
+
+            echo "💾 Saving PM2 state"
+            pm2 save
+
+            echo "✅ Deployment successful"
