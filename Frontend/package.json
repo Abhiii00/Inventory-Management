@@ -2,7 +2,7 @@
   "name": "adminPanel",
   "version": "0.1.0",
   "private": true,
-  "homepage": "",
+  "homepage": "http://3.26.15.242",
   "dependencies": {
     "@blueprintjs/core": "^4.13.0",
     "@emotion/react": "^11.11.1",
