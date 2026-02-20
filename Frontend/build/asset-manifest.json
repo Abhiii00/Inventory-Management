@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.059a4b3a.css",
+    "main.js": "/static/js/main.41880162.js",
+    "static/js/453.5c606753.chunk.js": "/static/js/453.5c606753.chunk.js",
+    "static/media/Saira-Medium.ttf": "/static/media/Saira-Medium.b932fd9553eda444756f.ttf",
+    "static/media/Saira-Regular.ttf": "/static/media/Saira-Regular.319c36be3b6a1d38caa1.ttf",
+    "static/media/Saira-ExtraBold.ttf": "/static/media/Saira-ExtraBold.b776caa11aa296dccd55.ttf",
+    "static/media/Saira-Bold.ttf": "/static/media/Saira-Bold.05d834e9102d602299d2.ttf",
+    "index.html": "/index.html",
+    "main.059a4b3a.css.map": "/static/css/main.059a4b3a.css.map",
+    "main.41880162.js.map": "/static/js/main.41880162.js.map",
+    "453.5c606753.chunk.js.map": "/static/js/453.5c606753.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.059a4b3a.css",
+    "static/js/main.41880162.js"
+  ]
+}
