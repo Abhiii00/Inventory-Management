@@ -21,18 +21,38 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           port: 22
           script: |
+            set -e
+
+            echo "📦 Going to project directory"
             cd /var/www/inventory-management
+
+            echo "⬇️ Pulling latest code"
             git pull origin main
 
+            echo "🔧 Backend setup"
             cd backend
             npm install
             pm2 restart backend || pm2 start src/server.js --name backend
 
+            echo "🎨 Frontend build"
             cd ../Frontend
             npm install
             CI=false npm run build
 
-            sudo rm -rf /var/www/html/*
-            sudo cp -r build/* /var/www/html/
+            if [ ! -d "build" ]; then
+              echo "❌ Build folder not found"
+              exit 1
+            fi
 
+            echo "🚀 Deploying frontend"
+            sudo rm -rf /var/www/html/*
+            sudo cp -r /var/www/inventory-management/Frontend/build/* /var/www/html/
+
+            echo "🔐 Fixing permissions"
+            sudo chown -R www-data:www-data /var/www/html
+            sudo chmod -R 755 /var/www/html
+
+            echo "💾 Saving PM2 state"
             pm2 save
+
+            echo "✅ Deployment successful"
